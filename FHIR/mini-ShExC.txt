@@ -421,7 +421,7 @@ fhirvs:publication-status ["draft" "active" "retired" "unknown"]
 fhirvs:quantity-comparator ["<" "<=" ">=" ">" "ad"]
 fhirvs:resource-types ["Observation" "Patient" "Procedure" "Questionnaire"]
 
-The <CodeableConcept> shape has a fhir:coding property which connects it to an RDF Collection of <Codings>. Querying the contents of an RDF Collection requires traversing the rdf:rest and rdf:first properties with a property chain, à la rdf:rest*/rdf:first .
+By convention, any property which references a shape starting with OneOrMore_X references an RDF Collection of <X>. Querying the contents of an RDF Collection requires traversing the rdf:rest and rdf:first properties with a property chain, à la rdf:rest*/rdf:first .
 
 
 Please generate a SPARQL query for the patient and the effectiveDate of an Observation for all Observations with a LoINC code of 72166-2.
