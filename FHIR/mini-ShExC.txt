@@ -423,5 +423,6 @@ fhirvs:resource-types ["Observation" "Patient" "Procedure" "Questionnaire"]
 
 By convention, any property which references a shape starting with OneOrMore_X references an RDF Collection of <X>. Querying the contents of an RDF Collection requires traversing the rdf:rest and rdf:first properties with a property chain, à la rdf:rest*/rdf:first .
 
+A ShEx TripleConstraint of the form fhir:v D (i.e. no []s around D) indicates a literal with datatype D. In RDF, literal datatypes are not nodes with an rdf:type arc, but instead tuples of a lexical value and a datatype.
 
 Please generate a SPARQL query for the patient and the effectiveDate of an Observation for all Observations with a LoINC code of 72166-2.
